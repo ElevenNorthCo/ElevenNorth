@@ -15,7 +15,10 @@ const Home = () => {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <MatrixRain />
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
-        <pre className="ascii-text text-emerald-400 mb-6 whitespace-pre leading-tight text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl max-w-full overflow-x-auto font-mono animate-fade-in-glow">
+  {/* Mobile Version: 2-Line ASCII (Hidden on lg and up) */}
+<pre className="ascii-text text-green-400 animate-glitch font-mono leading-tight tracking-tight mb-6 
+  text-[10px] sm:text-xs md:text-sm lg:hidden 
+  whitespace-pre-wrap text-center max-w-full overflow-x-auto">
 {`
  ███████╗██╗   ███████╗██╗  ██╗███████╗███╗   ██╗
  ██╔════╝██║   ██╔════╝██║  ██║██╔════╝████╗  ██║
@@ -30,6 +33,20 @@ const Home = () => {
  ██║╚██╗██║██║   ██║██╔══██╗   ██║   ██╔══██║
  ██║ ╚████║╚██████╔╝██║  ██║   ██║   ██║  ██║
  ╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝
+`}
+</pre>
+
+{/* Desktop: Full ASCII (Eleven North), glowing and centered */}
+<pre className="ascii-text text-green-400 animate-glitch font-mono leading-tight tracking-tight mb-6 
+  text-[10px] sm:text-sm md:text-base lg:text-lg xl:text-xl 
+  hidden lg:block whitespace-pre text-center max-w-full overflow-x-auto">
+{`
+███████╗██╗   ███████╗██╗  ██╗███████╗███╗   ██╗  ███╗   ██╗ ██████╗ ██████╗ ████████╗██╗  ██╗
+██╔════╝██║   ██╔════╝██║  ██║██╔════╝████╗  ██║  ████╗  ██║██╔═══██╗██╔══██╗╚══██╔══╝██║  ██║
+█████╗  ██║   █████╗  ██║  ██║█████╗  ██╔██╗ ██║  ██╔██╗ ██║██║   ██║██████╔╝   ██║   ███████║
+██╔══╝  ██║   ██╔══╝  ██║  ██║██╔══╝  ██║╚██╗██║  ██║╚██╗██║██║   ██║██╔══██╗   ██║   ██╔══██║
+███████╗█████╗███████╗███████║███████╗██║ ╚████║  ██║ ╚████║╚██████╔╝██║  ██║   ██║   ██║  ██║
+╚══════╝╚════╝╚══════╝╚══════╝╚══════╝╚═╝  ╚═══╝  ╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝
 `}
 </pre>
 
