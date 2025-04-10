@@ -13,10 +13,31 @@ import {
   ShoppingCart,
   HandHelping
 } from "lucide-react";
+import { Helmet } from "react-helmet-async";
+import clsx from "clsx";
+
+// ✨ Shared card styles
+const glowCard = "transition transform hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(0,255,0,0.15)] border border-emerald-900/40";
+
+// ✨ Icon hover glow
+const iconGlow = "transition duration-300 hover:text-green-400 hover:drop-shadow-[0_0_6px_#00FF88]";
 
 export default function About() {
   return (
-    <main className="relative text-white">
+    <main className="relative text-white overflow-hidden">
+      <Helmet>
+        <title>About Eleven North Co. | Web Development Shenandoah Valley</title>
+        <meta name="description" content="Learn about Eleven North Co., a Shenandoah Valley-based web development company specializing in websites, AI tools, and business automation." />
+        <meta name="keywords" content="web development Shenandoah Valley, Harrisonburg web design, AI automation VA, Eleven North Co, small business websites Virginia" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Eleven North Co." />
+        <meta property="og:title" content="About Eleven North Co." />
+        <meta property="og:description" content="Building custom websites, AI tools, and digital solutions from the Shenandoah Valley to the world." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.elevennorth.co/about" />
+        <meta property="og:image" content="/social-preview.jpg" />
+      </Helmet>
+
       {/* 🔥 HERO */}
       <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
         <MatrixRain />
@@ -35,7 +56,7 @@ export default function About() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-lg text-gray-300"
           >
-            We’re a digital innovation studio helping local businesses, startups, and visionaries bring their ideas to life through cutting-edge web and AI solutions.
+            We help local businesses, startups, and visionaries bring their ideas to life with cutting-edge digital solutions.
           </motion.p>
         </div>
       </section>
@@ -53,7 +74,7 @@ export default function About() {
             Our Roots Run Along Route 11 North
           </h2>
           <p className="text-white text-lg leading-relaxed max-w-3xl mx-auto">
-            Eleven North Co. began in the heart of the Shenandoah Valley with a simple belief: local businesses should have access to world-class digital tools. Inspired by Route 11 North, our name symbolizes growth, movement, and the journey every client takes with us.
+            Eleven North Co. was founded to give small businesses the same digital edge as large corporations—without the complexity or inflated costs.
           </p>
         </motion.div>
         <motion.div
@@ -64,50 +85,48 @@ export default function About() {
           className="text-white space-y-6 text-lg leading-relaxed"
         >
           <p>
-            Whether you’re a service provider looking to modernize, a creative launching a store, or a company streamlining operations — we walk with you every step of the way.
+            From Route 11 to regional impact, our journey is rooted in real people. We empower entrepreneurs, nonprofits, and trades with the digital tools to compete and grow.
           </p>
           <p>
-            We combine powerful AI, clean design, and handcrafted strategy to give you a site or tool that’s more than functional — it’s transformative.
+            Whether launching a store, automating a service, or creating something never done before—our job is to make it feel possible and painless.
           </p>
         </motion.div>
       </section>
 
-      {/* 💼 WHAT WE DO (WITH MATRIX RAIN + GLOWING CARDS) */}
-      <section className="relative py-24 px-6 overflow-hidden">
-        <MatrixRain />
+      {/* 💼 WHAT WE DO (with fixed matrix for mobile) */}
+      <section className="relative py-24 px-6">
+        <div className="absolute inset-0 overflow-hidden z-0">
+          <MatrixRain />
+        </div>
         <div className="relative z-10 max-w-5xl mx-auto text-center space-y-12">
           <h2 className="text-3xl font-bold bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
             What We Do
           </h2>
           <p className="text-white max-w-3xl mx-auto text-lg">
-            We offer hands-on, scalable digital solutions that help you grow — fast, smart, and affordably.
+            Scalable tools, handcrafted code, and automation that actually saves you time.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             {[
               {
-                icon: <ShoppingCart className="h-8 w-8 text-emerald-400" />,
+                icon: <ShoppingCart className={iconGlow} />,
                 title: "E-Commerce & Online Stores",
-                desc: "Launch your dream store with clean design, built-in SEO, and fast checkout.",
+                desc: "Launch lean, fast, and SEO-ready with custom Shopify and storefront builds.",
               },
               {
-                icon: <Cpu className="h-8 w-8 text-emerald-400" />,
+                icon: <Cpu className={iconGlow} />,
                 title: "AI Automation",
-                desc: "Automate tasks, increase efficiency, and scale your business with smart tools.",
+                desc: "Save time, scale faster. Integrate automation and smart tools into your workflow.",
               },
               {
-                icon: <Rocket className="h-8 w-8 text-emerald-400" />,
+                icon: <Rocket className={iconGlow} />,
                 title: "Web Development",
-                desc: "Custom websites built to convert, grow, and look great on every screen.",
+                desc: "Responsive, fast, and built to convert across every screen and device.",
               },
             ].map((item, i) => (
-              <Card
-                key={i}
-                className="bg-black/50 border border-emerald-900/40 transition hover:shadow-[0_0_20px_2px_rgba(0,255,0,0.2)]"
-              >
+              <Card key={i} className={clsx("bg-black/50", glowCard)}>
                 <CardContent className="p-6 text-left space-y-3">
-                  <div className="flex items-center gap-3">
-                    {item.icon}
+                  <div className="flex items-center gap-3">{item.icon}
                     <h3 className="text-lg font-semibold text-white">{item.title}</h3>
                   </div>
                   <p className="text-white">{item.desc}</p>
@@ -118,38 +137,37 @@ export default function About() {
         </div>
       </section>
 
-      {/* 🎯 WHO WE HELP (GRADIENT + ICON CARDS) */}
+      {/* 🎯 WHO WE HELP */}
       <section className="py-24 px-6 bg-black/60">
         <div className="max-w-5xl mx-auto text-center space-y-12">
           <h2 className="text-3xl font-bold bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
             Who We Help
           </h2>
           <p className="text-white max-w-3xl mx-auto text-lg">
-            We focus on the people who make our region special — from small businesses to nonprofit organizations.
+            We support the people who make our communities work — small business owners, local legends, and nonprofit changemakers.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
-                icon: <HeartHandshake className="h-8 w-8 text-emerald-400" />,
+                icon: <HeartHandshake className={iconGlow} />,
                 title: "Local Service Providers",
-                desc: "From contractors to creatives, we help small businesses thrive online.",
+                desc: "From HVAC techs to creatives — we help local legends level up online.",
               },
               {
-                icon: <HandHelping className="h-8 w-8 text-emerald-400" />,
+                icon: <HandHelping className={iconGlow} />,
                 title: "Nonprofits & Ministries",
-                desc: "Build donation-ready, mobile-friendly websites that reflect your mission.",
+                desc: "Donation-friendly, mobile-first sites for churches and outreach groups.",
               },
               {
-                icon: <Lightbulb className="h-8 w-8 text-emerald-400" />,
-                title: "Entrepreneurs & Startups",
-                desc: "We help you launch smart and lean — with tools that grow as you grow.",
+                icon: <Lightbulb className={iconGlow} />,
+                title: "Startups & Hustlers",
+                desc: "If you have a big idea or small dream — we’ll help you launch it fast.",
               },
             ].map((item, index) => (
-              <Card key={index} className="bg-black/50 border border-emerald-800/40">
+              <Card key={index} className={clsx("bg-black/50", glowCard)}>
                 <CardContent className="p-6 space-y-4 text-left">
-                  <div className="flex items-center gap-3">
-                    {item.icon}
+                  <div className="flex items-center gap-3">{item.icon}
                     <h3 className="text-lg font-semibold text-white">{item.title}</h3>
                   </div>
                   <p className="text-white">{item.desc}</p>
@@ -160,43 +178,42 @@ export default function About() {
         </div>
       </section>
 
-      {/* 🌟 WHY CHOOSE ELEVEN NORTH */}
+      {/* 🌟 WHY CHOOSE US */}
       <section className="py-24 px-6 bg-black">
         <div className="max-w-5xl mx-auto text-center space-y-12">
           <h2 className="text-3xl font-bold bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
             Why Choose Eleven North Co.?
           </h2>
           <p className="text-white max-w-3xl mx-auto text-lg">
-            We’re more than developers — we’re digital partners who genuinely care about your mission and your results.
+            We’re a local-first studio with global-standard tech, personal support, and zero BS.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
             {[
               {
-                icon: <Cpu className="h-6 w-6 text-emerald-400" />,
-                title: "AI-Powered Everything",
-                desc: "From insights to automations, we integrate smart tech into your workflow.",
+                icon: <Cpu className={iconGlow} />,
+                title: "AI-Powered Solutions",
+                desc: "From analytics to automation — we help you save time and grow faster.",
               },
               {
-                icon: <HeartHandshake className="h-6 w-6 text-emerald-400" />,
-                title: "Real Collaboration",
-                desc: "We listen, we adapt, and we deliver — together, every step of the way.",
+                icon: <HeartHandshake className={iconGlow} />,
+                title: "True Partnership",
+                desc: "You won’t be left guessing. We walk with you every step of the way.",
               },
               {
-                icon: <Globe className="h-6 w-6 text-emerald-400" />,
-                title: "Local Roots, Global Standards",
-                desc: "Shenandoah-based, but built to scale with clean code and high performance.",
+                icon: <Globe className={iconGlow} />,
+                title: "Built to Scale",
+                desc: "Fast-loading, modern frameworks that can grow with your business.",
               },
               {
-                icon: <Sparkle className="h-6 w-6 text-emerald-400" />,
-                title: "No Templates, No Fluff",
-                desc: "Everything is customized to your goals — no bloated frameworks or extras.",
+                icon: <Sparkle className={iconGlow} />,
+                title: "Custom Everything",
+                desc: "No cookie-cutters, no templates. Just handcrafted code and style.",
               },
             ].map((item, index) => (
-              <Card key={index} className="bg-black/40 border border-emerald-900/30 text-left">
-                <CardContent className="p-6 space-y-2">
-                  <div className="flex items-center gap-3">
-                    {item.icon}
+              <Card key={index} className={clsx("bg-black/40", glowCard)}>
+                <CardContent className="p-6 space-y-2 text-left">
+                  <div className="flex items-center gap-3">{item.icon}
                     <h3 className="text-lg font-semibold text-white">{item.title}</h3>
                   </div>
                   <p className="text-white">{item.desc}</p>
@@ -207,7 +224,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* 🚀 FINAL CTA – MATRIX + GLOWY BUTTON */}
+      {/* 🚀 FINAL CTA */}
       <section className="relative py-24 px-6 overflow-hidden">
         <MatrixRain />
         <div className="relative z-10 max-w-4xl mx-auto text-center space-y-6">
@@ -215,7 +232,7 @@ export default function About() {
             Let’s Build Something That Lasts
           </h2>
           <p className="text-white text-lg">
-            Whether you're launching your first site or building your tenth product — Eleven North is here to help you win.
+            Whether you're launching your first site or automating a full business — Eleven North is your partner.
           </p>
           <motion.div
             whileHover={{ scale: 1.05, boxShadow: "0 0 30px #00ff88" }}
