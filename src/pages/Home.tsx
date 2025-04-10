@@ -2,8 +2,13 @@ import { ArrowRight, Code2, MonitorSmartphone, Rocket } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import MatrixRain from '@/components/MatrixRain';
+import { projects } from '@/data/projectsData';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 
 const Home = () => {
+  const recentProjects = projects.slice(0, 3);
+
   return (
     <div className="relative">
       {/* Hero Section */}
@@ -81,6 +86,57 @@ const Home = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* 💼 Latest Projects Section */}
+      <section className="py-24 bg-black/70">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold bg-gradient-to-r from-emerald-400 to-green-600 text-transparent bg-clip-text mb-4">
+            Latest Projects
+          </h2>
+          <p className="text-gray-400 max-w-2xl mx-auto mb-12">
+            A preview of some of the latest work we’ve done for clients just like you.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
+            {recentProjects.map((project, index) => (
+              <a
+                key={index}
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block hover:opacity-90 transition"
+              >
+                <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300 bg-black/50 border-emerald-950 cursor-pointer">
+                  <div className="h-48 overflow-hidden">
+                    <img
+                      src={project.imageUrl}
+                      alt={project.title}
+                      className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                    />
+                  </div>
+                  <CardHeader>
+                    <CardTitle className="text-xl text-emerald-400">{project.title}</CardTitle>
+                    <CardDescription>{project.description}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map((tech, techIndex) => (
+                        <Badge key={techIndex} variant="outline" className="bg-emerald-950/50">
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </a>
+            ))}
+          </div>
+
+          <Button asChild size="lg" className="bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700">
+            <Link to="/portfolio">View Full Portfolio</Link>
+          </Button>
         </div>
       </section>
 
