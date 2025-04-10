@@ -56,19 +56,19 @@ const Home = () => {
                 icon: <Code2 className="h-8 w-8 text-emerald-500" />,
                 title: 'Custom Development',
                 description:
-                  'Tailored solutions built with cutting-edge technologies to meet your unique business needs.',
+                  'Tailored technology solutions built around your business. We don’t believe in one-size-fits-all. At Eleven North, we craft custom web and software solutions that align perfectly with your vision, operations, and goals. Whether it’s a smart automation tool or a full-scale web app, we use the latest technologies to bring your ideas to life—efficiently, securely, and at scale.',
               },
               {
                 icon: <MonitorSmartphone className="h-8 w-8 text-emerald-500" />,
                 title: 'Responsive Design',
                 description:
-                  'Beautiful, functional websites that work seamlessly across all devices and screen sizes.',
+                  'Pixel-perfect performance across all screens. Your customers are everywhere—and so are their devices. We design adaptive, intuitive interfaces that look and feel right, whether on desktop, tablet, or mobile. From the first tap to the final scroll, our responsive designs deliver a seamless, user-friendly experience that keeps people engaged.',
               },
               {
                 icon: <Rocket className="h-8 w-8 text-emerald-500" />,
                 title: 'Performance Optimization',
                 description:
-                  'Lightning-fast loading times and optimized user experiences that drive results.',
+                  'Speed, stability, and scalability—built-in. Slow websites kill conversions. That’s why we fine-tune every line of code for speed and performance. With Eleven North, you get lightning-fast load times, streamlined user journeys, and robust infrastructure that scales with your business. We optimize for what matters—results.',
               },
             ].map((feature, index) => (
               <div
