@@ -15,11 +15,24 @@ const Home = () => {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <MatrixRain />
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl sm:text-6xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-emerald-400 via-green-500 to-emerald-600 text-transparent bg-clip-text animate-gradient">
-              Elevate Your Digital Presence
-            </span>
-          </h1>
+        <pre className="ascii-text text-emerald-400 mb-6 whitespace-pre leading-tight text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl max-w-full overflow-x-auto font-mono animate-fade-in-glow">
+{`
+ ███████╗██╗   ███████╗██╗  ██╗███████╗███╗   ██╗
+ ██╔════╝██║   ██╔════╝██║  ██║██╔════╝████╗  ██║
+ █████╗  ██║   █████╗  ██║  ██║█████╗  ██╔██╗ ██║
+ ██╔══╝  ██║   ██╔══╝  ██║  ██║██╔══╝  ██║╚██╗██║
+ ███████╗█████╗███████╗ █████ ║███████╗██║   ██╔╝
+ ╚══════╝╚════╝╚══════╝╚══════╝╚══════╝  ╚═════╝ 
+
+ ███╗   ██╗ ██████╗ ██████╗ ████████╗██╗  ██╗
+ ████╗  ██║██╔═══██╗██╔══██╗╚══██╔══╝██║  ██║
+ ██╔██╗ ██║██║   ██║██████╔╝   ██║   ███████║
+ ██║╚██╗██║██║   ██║██╔══██╗   ██║   ██╔══██║
+ ██║ ╚████║╚██████╔╝██║  ██║   ██║   ██║  ██║
+ ╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝
+`}
+</pre>
+
           <p className="text-gray-300 text-lg sm:text-xl max-w-2xl mx-auto mb-8">
             Crafting exceptional web experiences in the heart of Shenandoah Valley
           </p>
