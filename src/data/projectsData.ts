@@ -1,5 +1,5 @@
 import reachingTheLostImg from "@/assets/reaching-the-lost.jpg";
-
+import reachingTheLostGPTImg from "@/assets/reaching-the-lost-gpt.jpg";
 
 export interface Project {
     title: string;
@@ -18,11 +18,11 @@ export interface Project {
       link: "https://www.reachingthelost.org",
     },
     {
-      title: "Social Media Dashboard",
-      description: "Analytics dashboard for social media management with interactive data visualization.",
-      technologies: ["TypeScript", "Next.js", "TailwindCSS", "D3.js"],
-      imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000",
-      link: "https://www.google.com",
+      title: "Reaching The Lost GPT",
+      description: "Trained a GPT to emulate the style Mike Barko uses when sharing The Gospel of Jesus. This allows new believers to be able to ask questions and get the repsponse in a way that is easy to understand.",
+      technologies: ["OpenAI", "GPT-4", "Python", "AI Training"],
+      imageUrl: reachingTheLostGPTImg,
+      link: "https://chatgpt.com/g/g-wYA2qkp3L-communities-4-christ",
     },
     {
       title: "AI-Powered Chat Application",
