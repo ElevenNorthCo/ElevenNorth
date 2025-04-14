@@ -8,11 +8,11 @@ export interface Project {
   
   export const projects: Project[] = [
     {
-      title: "E-Commerce Platform",
-      description: "A modern e-commerce solution with real-time inventory management and secure payment processing.",
-      technologies: ["React", "Node.js", "PostgreSQL", "Stripe"],
+      title: "Reaching The Lost",
+      description: "We redesigned and enhanced reachingthelost.org to better support Communities 4 Christ's mission of uniting believers and reaching the lost through a more engaging and user-friendly online experience.",
+      technologies: ["HTML5", "SEO", "Redesign", "PayPal"],
       imageUrl: "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=1000",
-      link: "https://www.google.com",
+      link: "https://www.reachingthelost.org",
     },
     {
       title: "Social Media Dashboard",
