@@ -25,7 +25,7 @@ export interface Project {
       link: "https://chatgpt.com/g/g-wYA2qkp3L-communities-4-christ",
     },
     {
-      title: "AI-Powered Chat Application",
+      title: "Ebay Seller Assistant",
       description: "Real-time chat platform with AI-powered language translation and content moderation.",
       technologies: ["React", "WebSocket", "OpenAI", "Redis"],
       imageUrl: "https://images.unsplash.com/photo-1587560699334-cc4ff634909a?auto=format&fit=crop&q=80&w=1000",
