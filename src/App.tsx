@@ -8,11 +8,14 @@ import About from './pages/About';
 import Portfolio from './pages/Portfolio';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/ui/sonner';
+import ScrollToTop from './components/ScrollTotop';
+
 
 function App() {
   return (
     <ThemeProvider defaultTheme="dark">
       <Router>
+        <ScrollToTop />
         <div className="min-h-screen bg-gradient-to-b from-black via-emerald-950 to-black">
           <Navbar />
           <Routes>

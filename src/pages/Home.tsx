@@ -51,7 +51,7 @@ const Home = () => {
 </pre>
 
           <p className="text-gray-300 text-lg sm:text-xl max-w-2xl mx-auto mb-8">
-            Crafting exceptional web experiences in the heart of Shenandoah Valley
+            Crafting exceptional web experiences in the heart of The Shenandoah Valley
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
