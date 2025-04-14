@@ -29,7 +29,7 @@ export interface Project {
       description: "Real-time chat platform with AI-powered language translation and content moderation.",
       technologies: ["React", "WebSocket", "OpenAI", "Redis"],
       imageUrl: "https://images.unsplash.com/photo-1587560699334-cc4ff634909a?auto=format&fit=crop&q=80&w=1000",
-      link: "https://www.google.com",
+      link: "",
     },
     // Add more as needed...
   ];
