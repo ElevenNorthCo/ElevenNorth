@@ -1,3 +1,6 @@
+import reachingTheLostImg from "@/assets/reaching-the-lost.jpg";
+
+
 export interface Project {
     title: string;
     description: string;
@@ -11,7 +14,7 @@ export interface Project {
       title: "Reaching The Lost",
       description: "We redesigned and enhanced reachingthelost.org to better support Communities 4 Christ's mission of uniting believers and reaching the lost through a more engaging and user-friendly online experience.",
       technologies: ["HTML5", "SEO", "Redesign", "PayPal"],
-      imageUrl: "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=1000",
+      imageUrl: reachingTheLostImg,
       link: "https://www.reachingthelost.org",
     },
     {
