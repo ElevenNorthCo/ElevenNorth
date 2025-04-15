@@ -26,8 +26,8 @@ export interface Project {
     },
     {
       title: "Ebay Seller Assistant",
-      description: "Real-time chat platform with AI-powered language translation and content moderation.",
-      technologies: ["React", "WebSocket", "OpenAI", "Redis"],
+      description: "The eBay Sell Assist tool helps users create high-performing listings with ease. Just upload a photo of your item, and the app automatically generates a compelling title, SEO-optimized description, and relevant hashtags. It’s a fast, AI-powered way to simplify selling and boost visibility on eBay.",
+      technologies: ["React", "Python", "OpenAI", "Gemini"],
       imageUrl: "https://images.unsplash.com/photo-1587560699334-cc4ff634909a?auto=format&fit=crop&q=80&w=1000",
       link: "",
     },

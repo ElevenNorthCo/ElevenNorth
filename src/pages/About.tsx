@@ -20,7 +20,9 @@ import clsx from "clsx";
 const glowCard = "transition transform hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(0,255,0,0.15)] border border-emerald-900/40";
 
 // ✨ Icon hover glow
-const iconGlow = "transition duration-300 hover:text-green-400 hover:drop-shadow-[0_0_6px_#00FF88]";
+//const iconGlow = "transition duration-300 hover:text-green-400 hover:drop-shadow-[0_0_6px_#00FF88]";
+const iconGlow = "text-emerald-400 transition-all duration-300 transform hover:scale-110 hover:drop-shadow-[0_0_10px_#00FF88]";
+
 
 export default function About() {
   return (
